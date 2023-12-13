@@ -39,5 +39,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-mongodb",
+      options: {
+        connectionString:
+          "mongodb+srv://devblow:azerty123@cluster0.nspdj3e.mongodb.net/?retryWrites=true&w=majority",
+        dbName: "cars",
+        collection: ["voiture"], // Ajoutez le nom de vos collections MongoDB
+      },
+    },
   ],
 }
